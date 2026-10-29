@@ -1,0 +1,40 @@
+{
+  "name": "axios-dedupe-adapter",
+  "version": "0.1.0",
+  "description": "Axios adapter for concurrent request deduplication (in-flight merge) with optional TTL result caching. Zero runtime dependencies.",
+  "keywords": [
+    "axios",
+    "adapter",
+    "dedupe",
+    "deduplication",
+    "request",
+    "cache",
+    "inflight",
+    "merge"
+  ],
+  "license": "MIT",
+  "author": "Micheal-zhou",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "engines": {
+    "node": ">=14"
+  },
+  "peerDependencies": {
+    "axios": ">=0.21"
+  },
+  "scripts": {
+    "build": "node build.mjs",
+    "prepublishOnly": "npm run build"
+  }
+}
